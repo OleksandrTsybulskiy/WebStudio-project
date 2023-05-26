@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Header section -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
         <nav class="nav-container">
           <a href="./index.html" class="link-logo link">Web<span class="link-title-primary">Studio</span></a>
@@ -46,17 +46,29 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-hamburger"
+            width="32"
+            height="22"
+          >
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
     <!-- Main -->
     <main>
       <!-- Hero section -->
-      <!-- <section class="hero-section section">
+      <section class="hero-section section">
         <div class="container">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
           <button type="button" class="order-button button" data-modal-open>Order Service</button>
         </div>
-      </section> -->
+      </section>
       <!-- Services section -->
       <section class="services-section section">
         <div class="container">
@@ -110,29 +122,41 @@
         </div>
       </section>
       <!-- Services examples -->
-      <!-- <section class="ex-section section">
+      <section class="ex-section section">
         <div class="container">
           <h2 class="title-examples">What are we doing</h2>
           <ul class="list-examples list">
             <li class="ex-list-item">
-              <img src="./images/images-services-section/serv1.jpg" alt="example1" width="360" />
+              <img src="./images/images-services-section/serv@1x-2.jpg"
+              srcset="./images/images-services-section/serv@1x-2.jpg 1x, ./images/images-services-section/serv@2x-2.jpg 2x" 
+              alt="example1" 
+              width="360" />
             </li>
             <li class="ex-list-item">
-              <img src="./images/images-services-section/serv2.jpg" alt="example2" width="360" />
+              <img src="./images/images-services-section/serv@1x-1.jpg"
+              srcset="/images/images-services-section/serv@1x-1.jpg 1x, /images/images-services-section/serv@2x-1.jpg 2x"
+              alt="example2" 
+              width="360" />
             </li>
             <li class="ex-list-item">
-              <img src="./images/images-services-section/serv3.jpg" alt="example3" width="360" />
+              <img src="./images/images-services-section/serv@1x.jpg"
+              srcset="./images/images-services-section/serv@1x.jpg 1x, ./images/images-services-section/serv@2x.jpg 2x"
+              alt="example3" 
+              width="360" />
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Team -->
       <section class="team-section section">
         <div class="container">
           <h2 class="title-team">Our Team</h2>
           <ul class="list-team list">
             <li class="team-frame">
-              <img src="./images/images-team/employee1.jpg" alt="Mark Guerrero" width="264" />
+              <img src="./images/images-team/t1@1x.jpg"
+              srcset="./images/images-team/t1@1x.jpg 1x, ./images/images-team/t1@2x.jpg 2x" 
+              alt="Mark Guerrero" 
+              width="264" />
               <div class="emp-info">
                 <h3 class="employee-name">Mark Guerrero</h3>
                 <p class="duty">Product Designer</p>
@@ -169,7 +193,10 @@
               </div>
             </li>
             <li class="team-frame">
-              <img src="./images/images-team/employee2.jpg" alt="Tom Ford" width="264" />
+              <img src="./images/images-team/t2@1x-1.jpg" 
+              srcset="./images/images-team/t2@1x-1.jpg 1x, ./images/images-team/t2@2x-1.jpg 2x"
+              alt="Tom Ford" 
+              width="264" />
               <div class="emp-info">
                 <h3 class="employee-name">Tom Ford</h3>
                 <p class="duty">Frontend Developer</p>
@@ -206,7 +233,10 @@
               </div>
             </li>
             <li class="team-frame">
-              <img src="./images/images-team/employee3.jpg" alt="Camila Garcia" width="264" />
+              <img src="./images/images-team/t3@1x-2.jpg"
+              srcset="./images/images-team/t3@1x-2.jpg 1x, ./images/images-team/t3@2x-2.jpg 2x"
+              alt="Camila Garcia" 
+              width="264" />
               <div class="emp-info">
                 <h3 class="employee-name">Camila Garcia</h3>
                 <p class="duty">Marketing</p>
@@ -243,7 +273,10 @@
               </div>
             </li>
             <li class="team-frame">
-              <img src="./images/images-team/employee4.jpg" alt="Daniel Wilson" width="264" />
+              <img src="./images/images-team/t4@1x-3.jpg"
+              srcset="./images/images-team/t4@1x-3.jpg 1x, ./images/images-team/t4@2x-3.jpg 2x"
+              alt="Daniel Wilson" 
+              width="264" />
               <div class="emp-info">
                 <h3 class="employee-name">Daniel Wilson</h3>
                 <p class="duty">UI Designer</p>
@@ -434,6 +467,91 @@
         </form>
       </div>
     </div>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="modal-close-btn button menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="8"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li>
+          <a href="" class="mobile-navigation link">
+            Studio
+        </a>
+      </li>
+        <li>
+          <a href="./portfolio.html" class="mobile-navigation link">
+            Portfolio
+        </a>
+      </li>
+        <li>
+          <a href="" class="mobile-navigation link active">
+            Contacts
+        </a>
+      </li>
+      </ul>
+      <ul class="mobile-contacts list">
+        <li>
+          <a href="tel:+110001111111" class="mobile-cont-tel link">
+            +11 (000) 111-11-11
+        </a>
+      </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile-cont-email link">
+            info@devstudio.com
+        </a>
+      </li>
+      </ul>
+      <ul class="mobile-socials footer-soc-list list">
+        <li class="footer-soc-item">
+          <a href="" class="footer-soc-link link">
+            <svg class="footer-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-soc-item">
+          <a href="" class="footer-soc-link link">
+            <svg class="footer-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-soc-item">
+          <a href="" class="footer-soc-link link">
+            <svg class="footer-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-soc-item">
+          <a href="" class="footer-soc-link link">
+            <svg class="footer-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
