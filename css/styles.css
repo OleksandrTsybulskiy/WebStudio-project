@@ -105,14 +105,14 @@ body {
 /* Mobile */
 
 .section {
-  padding: 96px 0;
+  margin: 96px 0;
 }
 
 /* Desctop */
 
 @media only screen and (min-width: 1158px) {
   .section {
-    padding: 120px 0;
+    margin: 120px 0;
   }
 }
 
@@ -172,7 +172,7 @@ body {
 }
 .menu-toggle-close {
   background: var(--color-cornflower);
-  border: 1px solid var(--color-navy-blue);
+  border: 1px solid var(--color-cornflower);
 }
 
 .menu-toggle-close-icon {
@@ -214,7 +214,6 @@ body {
 
 .mobile-menu .link {
   display: block;
-  padding: 10px;
 }
 
 .mobile-contacts {
@@ -244,6 +243,12 @@ body {
   color: var(--color-iris);
 }
 
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+  .mobile-cont-tel {
+    font-size: 24px;
+  }
+}
+
 .mobile-cont-email {
   font-weight: 500;
   font-size: 20px;
@@ -251,7 +256,7 @@ body {
   color: var(--color-slate);
 }
 
-.mob-menu-soc-item {
+.mob-menu-soc-item:not(:last-child) {
   margin-right: auto;
 }
 
@@ -605,17 +610,9 @@ body {
   }
 }
 
-.ex-section {
-  padding-bottom: 120px;
-}
-
 .list-examples {
   display: flex;
   gap: 24px;
-}
-
-.ex-list-item {
-  flex-basis: calc((100% - 3 * 16px) / 3);
 }
 
 .title-examples {
@@ -633,6 +630,7 @@ body {
 
 .team-section {
   background-color: var(--color-cloud);
+  padding: 120px 0 120px 0;
 }
 
 .title-team {
@@ -799,7 +797,7 @@ body {
 }
 
 .cust-item {
-  width: calc((100% - 96px) / 2);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
@@ -824,6 +822,7 @@ body {
 .footer {
   background-color: var(--color-navy-blue);
   padding: 96px 0;
+  margin: 0;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -1090,15 +1089,18 @@ body {
 
 /* Buttons */
 
-.portfolio-section {
-  padding: 96px 0 120px;
-}
-
 .list-filter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
   margin-bottom: 72px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .list-filter {
+    justify-content: center;
+  }
 }
 
 .filter-button {
@@ -1135,7 +1137,18 @@ body {
 }
 
 .ex-list-item {
-  flex-basis: calc((100% - 2 * 24px) / 3);
+  flex-basis: calc((100% - 2 * 24px) / 1);
+}
+
+@media screen and (min-width: 768px) {
+  .ex-list-item {
+    flex-basis: calc((100% - 2 * 15px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .ex-list-item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
 }
 
 .link-project {
@@ -1198,6 +1211,12 @@ body {
   transition: transform var(--anim-style);
   padding: 24px;
   padding-top: 72px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 427px) {
+  .modal {
+    width: 95%;
+  }
 }
 
 .modal-close-btn {
@@ -1308,7 +1327,7 @@ body {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--color-navy-blue);
+  color: var(--color-light-slate);
   padding: 8px 0 0 16px;
   transition: outline var(--anim-style);
   margin-bottom: 16px;
